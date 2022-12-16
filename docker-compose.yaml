@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  service:
+    image: powerstudio-gateway:latest
+    build: .
+    restart: always
+    environment:
+      - POWERSTUDIO=$POWERSTUDIO
+      - POWERSTUDIO_PORT=$POWERSTUDIO_PORT
+      - MQTT_BROKER=$MQTT_BROKER
+      - MQTT_PORT=$MQTT_PORT
+      - MQTT_TOPIC=$MQTT_TOPIC
+      - MQTT_CLIENT_ID=$MQTT_CLIENT_ID
+      - MQTT_USERNAME=$MQTT_USERNAME
+      - MQTT_PASSWORD=$MQTT_PASSWORD
+      - VAR_INFO_RETRIEVAL_INTERVAL=$VAR_INFO_RETRIEVAL_INTERVAL
+      - VALUES_RETRIEVAL_INTERVAL=$VALUES_RETRIEVAL_INTERVAL
