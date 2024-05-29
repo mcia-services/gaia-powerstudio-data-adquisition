@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  service:
+  powerstudio-gateway:
     image: powerstudio-gateway:latest
     build: .
     restart: always
@@ -16,3 +16,10 @@ services:
       - MQTT_PASSWORD=$MQTT_PASSWORD
       - VAR_INFO_RETRIEVAL_INTERVAL=$VAR_INFO_RETRIEVAL_INTERVAL
       - VALUES_RETRIEVAL_INTERVAL=$VALUES_RETRIEVAL_INTERVAL
+
+    networks:
+      - emqx-network
+
+networks:
+  emqx-network:
+    external: true
