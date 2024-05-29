@@ -30,14 +30,4 @@ Launch the docker-compose manifest:
 
 ## Usage without Docker
 
-Create a virtualenv using the setup-env.sh script:
-`source ./setup-env.sh`
-
-Activate the virtualenv with the activate.sh script:
-`source ./activate-env.sh`
-
-Create .env file with the variables described above.
-
-Launch the script:
-- Win: `py ./src/app.py`
-- Linux: `python3 ./src/app.py`
+Create stack.env file with the variables described above.
