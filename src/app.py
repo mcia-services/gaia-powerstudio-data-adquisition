@@ -70,7 +70,7 @@ app = rocketry.Rocketry()
 
 
 # Get data task
-@app.task(VALUES_RETRIEVAL_INTERVAL | rocketry.conds.retry(3))  # type: ignore
+@app.task(rocketry.conds.every(VALUES_RETRIEVAL_INTERVAL) | rocketry.conds.retry(3))  # type: ignore
 def task_get_data():
 
     # Get the values from all the variables, in packs
