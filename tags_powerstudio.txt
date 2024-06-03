@@ -1,0 +1,262 @@
+# Climatitzadora 1
+CT TR14 Climatitz 1.AI1
+CT TR14 Climatitz 1.AI2
+CT TR14 Climatitz 1.AI3
+CT TR14 Climatitz 1.ANI
+CT TR14 Climatitz 1.DAI1
+CT TR14 Climatitz 1.DAI2
+CT TR14 Climatitz 1.DAI3
+CT TR14 Climatitz 1.VAI
+CT TR14 Climatitz 1.API
+CT TR14 Climatitz 1.CPI
+CT TR14 Climatitz 1.IPI
+CT TR14 Climatitz 1.COSI
+CT TR14 Climatitz 1.VAE
+CT TR14 Climatitz 1.AE
+CT TR14 Climatitz 1.CE
+CT TR14 Climatitz 1.IE
+
+# Climatitzadora 2
+CT TR14 Climatitz 2.AI1
+CT TR14 Climatitz 2.AI2
+CT TR14 Climatitz 2.AI3
+CT TR14 Climatitz 2.ANI
+CT TR14 Climatitz 2.DAI1
+CT TR14 Climatitz 2.DAI2
+CT TR14 Climatitz 2.DAI3
+CT TR14 Climatitz 2.VAI
+CT TR14 Climatitz 2.API
+CT TR14 Climatitz 2.CPI
+CT TR14 Climatitz 2.IPI
+CT TR14 Climatitz 2.COSI
+CT TR14 Climatitz 2.VAE
+CT TR14 Climatitz 2.AE
+CT TR14 Climatitz 2.CE
+CT TR14 Climatitz 2.IE
+
+# Refredadora 1
+CT TR14 Refr 1.AI1
+CT TR14 Refr 1.AI2
+CT TR14 Refr 1.AI3
+CT TR14 Refr 1.ANI
+CT TR14 Refr 1.DAI1
+CT TR14 Refr 1.DAI2
+CT TR14 Refr 1.DAI3
+CT TR14 Refr 1.VAI
+CT TR14 Refr 1.API
+CT TR14 Refr 1.CPI
+CT TR14 Refr 1.IPI
+CT TR14 Refr 1.COSI
+CT TR14 Refr 1.VAE
+CT TR14 Refr 1.AE
+CT TR14 Refr 1.CE
+CT TR14 Refr 1.IE
+
+# Refredadora 2
+CT TR14 Refr 2.AI1
+CT TR14 Refr 2.AI2
+CT TR14 Refr 2.AI3
+CT TR14 Refr 2.ANI
+CT TR14 Refr 2.DAI1
+CT TR14 Refr 2.DAI2
+CT TR14 Refr 2.DAI3
+CT TR14 Refr 2.VAI
+CT TR14 Refr 2.API
+CT TR14 Refr 2.CPI
+CT TR14 Refr 2.IPI
+CT TR14 Refr 2.COSI
+CT TR14 Refr 2.VAE
+CT TR14 Refr 2.AE
+CT TR14 Refr 2.CE
+CT TR14 Refr 2.IE
+
+# Bomba de calor 1
+CT TR14 Bomba Calor 1.AI1
+CT TR14 Bomba Calor 1.AI2
+CT TR14 Bomba Calor 1.AI3
+CT TR14 Bomba Calor 1.ANI
+CT TR14 Bomba Calor 1.DAI1
+CT TR14 Bomba Calor 1.DAI2
+CT TR14 Bomba Calor 1.DAI3
+CT TR14 Bomba Calor 1.VAI
+CT TR14 Bomba Calor 1.API
+CT TR14 Bomba Calor 1.CPI
+CT TR14 Bomba Calor 1.IPI
+CT TR14 Bomba Calor 1.COSI
+CT TR14 Bomba Calor 1.VAE
+CT TR14 Bomba Calor 1.AE
+CT TR14 Bomba Calor 1.CE
+CT TR14 Bomba Calor 1.IE
+
+# Bomba de calor 2
+CT TR14 Bomba Calor 2.AI1
+CT TR14 Bomba Calor 2.AI2
+CT TR14 Bomba Calor 2.AI3
+CT TR14 Bomba Calor 2.ANI
+CT TR14 Bomba Calor 2.DAI1
+CT TR14 Bomba Calor 2.DAI2
+CT TR14 Bomba Calor 2.DAI3
+CT TR14 Bomba Calor 2.VAI
+CT TR14 Bomba Calor 2.API
+CT TR14 Bomba Calor 2.CPI
+CT TR14 Bomba Calor 2.IPI
+CT TR14 Bomba Calor 2.COSI
+CT TR14 Bomba Calor 2.VAE
+CT TR14 Bomba Calor 2.AE
+CT TR14 Bomba Calor 2.CE
+CT TR14 Bomba Calor 2.IE
+
+# Bombes impulsio de fred
+CT TR14 Bombes Fred.AI1
+CT TR14 Bombes Fred.AI2
+CT TR14 Bombes Fred.AI3
+CT TR14 Bombes Fred.ANI
+CT TR14 Bombes Fred.DAI1
+CT TR14 Bombes Fred.DAI2
+CT TR14 Bombes Fred.DAI3
+CT TR14 Bombes Fred.VAI
+CT TR14 Bombes Fred.API
+CT TR14 Bombes Fred.CPI
+CT TR14 Bombes Fred.IPI
+CT TR14 Bombes Fred.COSI
+CT TR14 Bombes Fred.VAE
+CT TR14 Bombes Fred.AE
+CT TR14 Bombes Fred.CE
+CT TR14 Bombes Fred.IE
+
+# Bombes impulsio de calor
+CT TR14 Bombes Calor.AI1
+CT TR14 Bombes Calor.AI2
+CT TR14 Bombes Calor.AI3
+CT TR14 Bombes Calor.ANI
+CT TR14 Bombes Calor.DAI1
+CT TR14 Bombes Calor.DAI2
+CT TR14 Bombes Calor.DAI3
+CT TR14 Bombes Calor.VAI
+CT TR14 Bombes Calor.API
+CT TR14 Bombes Calor.CPI
+CT TR14 Bombes Calor.IPI
+CT TR14 Bombes Calor.COSI
+CT TR14 Bombes Calor.VAE
+CT TR14 Bombes Calor.AE
+CT TR14 Bombes Calor.CE
+CT TR14 Bombes Calor.IE
+
+# Totals Aigua i Gas edifici Gaia
+# Dispositiu tipus LM-24-M
+# C1=aigua, C2=gas, C3=gas labs
+CT TR14 aigua i gas.C1
+CT TR14 aigua i gas.C2
+CT TR14 aigua i gas.C3
+
+# Medidor de Elec Clima fan-coil
+CT TR14 elec clima fan-coil.AI1
+CT TR14 elec clima fan-coil.AI2
+CT TR14 elec clima fan-coil.AI3
+CT TR14 elec clima fan-coil.AI
+CT TR14 elec clima fan-coil.VAI
+CT TR14 elec clima fan-coil.API
+CT TR14 elec clima fan-coil.CPI
+CT TR14 elec clima fan-coil.IPI
+CT TR14 elec clima fan-coil.PFI1
+CT TR14 elec clima fan-coil.PFI2
+CT TR14 elec clima fan-coil.PFI3
+CT TR14 elec clima fan-coil.PFI
+CT TR14 elec clima fan-coil.DVI1
+CT TR14 elec clima fan-coil.DVI2
+CT TR14 elec clima fan-coil.DVI3
+CT TR14 elec clima fan-coil.DAI1
+CT TR14 elec clima fan-coil.DAI2
+CT TR14 elec clima fan-coil.DAI3
+
+# Produccio R1 amb energimetre Multical 602
+CT TR14 Refr 1 - Kamstrup.Actual_flow
+CT TR14 Refr 1 - Kamstrup.Actual_flow_Units
+CT TR14 Refr 1 - Kamstrup.Actual_flow_decimal
+CT TR14 Refr 1 - Kamstrup.Actual_power
+CT TR14 Refr 1 - Kamstrup.Actual_power_Units
+CT TR14 Refr 1 - Kamstrup.Actual_power_decimal
+CT TR14 Refr 1 - Kamstrup.Cooling_energy_E3
+CT TR14 Refr 1 - Kamstrup.Cooling_energy_E3_Decimal
+CT TR14 Refr 1 - Kamstrup.Cooling_energy_E3_Units
+CT TR14 Refr 1 - Kamstrup.Heat_energy_E1
+CT TR14 Refr 1 - Kamstrup.Heat_energy_E1_Units
+CT TR14 Refr 1 - Kamstrup.Heat_energy_E1_decimal
+CT TR14 Refr 1 - Kamstrup.Info_code
+CT TR14 Refr 1 - Kamstrup.Inlet_temperature_T1
+CT TR14 Refr 1 - Kamstrup.Outlet_temperature_T2
+CT TR14 Refr 1 - Kamstrup.Program_version
+CT TR14 Refr 1 - Kamstrup.STATUS
+CT TR14 Refr 1 - Kamstrup.VDTTM
+CT TR14 Refr 1 - Kamstrup.Volume_V1
+CT TR14 Refr 1 - Kamstrup.Volume_V1_Units
+CT TR14 Refr 1 - Kamstrup.Volume_V1_decimal
+
+# Produccio R2 amb energimetre Multical 602
+CT TR14 Refr 2 - Kamstrup.Actual_flow
+CT TR14 Refr 2 - Kamstrup.Actual_flow_Units
+CT TR14 Refr 2 - Kamstrup.Actual_flow_decimal
+CT TR14 Refr 2 - Kamstrup.Actual_power
+CT TR14 Refr 2 - Kamstrup.Actual_power_Units
+CT TR14 Refr 2 - Kamstrup.Actual_power_decimal
+CT TR14 Refr 2 - Kamstrup.Cooling_energy_E3
+CT TR14 Refr 2 - Kamstrup.Cooling_energy_E3_Decimal
+CT TR14 Refr 2 - Kamstrup.Cooling_energy_E3_Units
+CT TR14 Refr 2 - Kamstrup.Heat_energy_E1
+CT TR14 Refr 2 - Kamstrup.Heat_energy_E1_Units
+CT TR14 Refr 2 - Kamstrup.Heat_energy_E1_decimal
+CT TR14 Refr 2 - Kamstrup.Info_code
+CT TR14 Refr 2 - Kamstrup.Inlet_temperature_T1
+CT TR14 Refr 2 - Kamstrup.Outlet_temperature_T2
+CT TR14 Refr 2 - Kamstrup.Program_version
+CT TR14 Refr 2 - Kamstrup.STATUS
+CT TR14 Refr 2 - Kamstrup.VDTTM
+CT TR14 Refr 2 - Kamstrup.Volume_V1
+CT TR14 Refr 2 - Kamstrup.Volume_V1_Units
+CT TR14 Refr 2 - Kamstrup.Volume_V1_decimal
+
+# Produccio BC1 amb energimetre Multical 602
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_flow
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_flow_Units
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_flow_decimal
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_power
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_power_Units
+CT TR14 Bomba Calor 1 - Kamstrup.Actual_power_decimal
+CT TR14 Bomba Calor 1 - Kamstrup.Cooling_energy_E3
+CT TR14 Bomba Calor 1 - Kamstrup.Cooling_energy_E3_Decimal
+CT TR14 Bomba Calor 1 - Kamstrup.Cooling_energy_E3_Units
+CT TR14 Bomba Calor 1 - Kamstrup.Heat_energy_E1
+CT TR14 Bomba Calor 1 - Kamstrup.Heat_energy_E1_Units
+CT TR14 Bomba Calor 1 - Kamstrup.Heat_energy_E1_decimal
+CT TR14 Bomba Calor 1 - Kamstrup.Info_code
+CT TR14 Bomba Calor 1 - Kamstrup.Inlet_temperature_T1
+CT TR14 Bomba Calor 1 - Kamstrup.Outlet_temperature_T2
+CT TR14 Bomba Calor 1 - Kamstrup.Program_version
+CT TR14 Bomba Calor 1 - Kamstrup.STATUS
+CT TR14 Bomba Calor 1 - Kamstrup.VDTTM
+CT TR14 Bomba Calor 1 - Kamstrup.Volume_V1
+CT TR14 Bomba Calor 1 - Kamstrup.Volume_V1_Units
+CT TR14 Bomba Calor 1 - Kamstrup.Volume_V1_decimal
+
+# Produccio BC2 amb energimetre Multical 602
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_flow
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_flow_Units
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_flow_decimal
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_power
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_power_Units
+CT TR14 Bomba Calor 2 - Kamstrup.Actual_power_decimal
+CT TR14 Bomba Calor 2 - Kamstrup.Cooling_energy_E3
+CT TR14 Bomba Calor 2 - Kamstrup.Cooling_energy_E3_Decimal
+CT TR14 Bomba Calor 2 - Kamstrup.Cooling_energy_E3_Units
+CT TR14 Bomba Calor 2 - Kamstrup.Heat_energy_E1
+CT TR14 Bomba Calor 2 - Kamstrup.Heat_energy_E1_Units
+CT TR14 Bomba Calor 2 - Kamstrup.Heat_energy_E1_decimal
+CT TR14 Bomba Calor 2 - Kamstrup.Info_code
+CT TR14 Bomba Calor 2 - Kamstrup.Inlet_temperature_T1
+CT TR14 Bomba Calor 2 - Kamstrup.Outlet_temperature_T2
+CT TR14 Bomba Calor 2 - Kamstrup.Program_version
+CT TR14 Bomba Calor 2 - Kamstrup.STATUS
+CT TR14 Bomba Calor 2 - Kamstrup.VDTTM
+CT TR14 Bomba Calor 2 - Kamstrup.Volume_V1
+CT TR14 Bomba Calor 2 - Kamstrup.Volume_V1_Units
+CT TR14 Bomba Calor 2 - Kamstrup.Volume_V1_decimal
