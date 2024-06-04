@@ -10,9 +10,10 @@ services:
     env_file:
       - stack.env
     networks:
-      - emqx-network
+      - gaia
     pull_policy: build
 
 networks:
-  emqx-network:
-    external: true
+  gaia:
+    external:
+      name: gaia

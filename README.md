@@ -15,10 +15,9 @@ Create .env file with the following variables:
 ```text
 LOGGING_LEVEL="INFO"
 
-POWERSTUDIO_HOST="domain.com"
-POWERSTUDIO_PORT=443
+POWERSTUDIO_URL="<server_url: http://domain.com:80>"
 
-VALUES_RETRIEVAL_INTERVAL="5 minutes"
+VALUES_RETRIEVAL_INTERVAL="every 5 minutes"
 
 MQTT_BROKER="otherdomain.com"
 MQTT_PORT=1883
@@ -29,7 +28,7 @@ MQTT_PASSWORD="password"
 ```
 
 Launch the docker-compose manifest:
-`docker-compose up -d`
+`docker-compose up -d --build`
 
 ## Usage without Docker
 

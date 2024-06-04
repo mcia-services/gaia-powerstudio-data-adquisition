@@ -94,11 +94,11 @@ def task_get_data():
                 logger.error("Max retries reached, aborting")
                 return
             time.sleep(5)
-    # Print the measurement
-    # Convert dictionary to JSON inside a payload object
+
+    # Convert data to JSON
     logger.info("Converting data to JSON")
     payload_json = json.dumps({"payload": measurement})
-    # Print the JSON
+
     # Publish to MQTT broker
     logger.info(
         "Sending data from Powerstudio, %i tags, to MQTT broker %s:%i",
