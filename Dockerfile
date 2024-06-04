@@ -7,12 +7,12 @@ FROM python:3.9-buster
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./requirements.txt
-RUN pip install --no-cache-dir -r ./requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src/app.py ./app.py
-COPY src/powerstudio_gateway.py ./powerstudio_gateway.py
+COPY src/powerstudio_gateway.py powerstudio_gateway.py
 
-COPY tags_powerstudio.txt ./tags_powerstudio.txt
+COPY tags_powerstudio.txt tags_powerstudio.txt
 
 CMD ["python", "./app.py"]
