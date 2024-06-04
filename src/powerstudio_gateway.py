@@ -1,7 +1,8 @@
 # pylint: disable=missing-class-docstring, missing-function-docstring, line-too-long
 """powerstudio_gateway module, used to connect to the PowerStudio API and get the data from the devices."""
 
-from typing import TypeVar
+import logging
+from typing import Optional, TypeVar
 import xml.etree
 import xml.etree.ElementTree
 import xml.dom.minidom
@@ -62,10 +63,14 @@ class PowerStudioGateway:
     """
     READ_VALUES_BATCH_SIZE = 40
 
-    def __init__(self, host: str, port: int):
-        self.host = host
-        self.port = port
+    def __init__(self, url: str, logger: Optional[logging.Logger] = None):
+        self.url = url
         self.variable_ids: list[str] = []
+        self.logger = (
+            logger
+            if logger is not None
+            else logging.getLogger("PowerStudioGateway")
+        )
 
     def tags_available(self):
         return len(self.variable_ids) > 0
@@ -86,7 +91,7 @@ class PowerStudioGateway:
     def get_available_tags(self):
         # Get all the devices XML from PowerStudio
         response = urllib.request.urlopen(
-            f"{self.host}:{self.port}{PowerStudioGateway.DEVICES_PATH}"
+            f"{self.url}{PowerStudioGateway.DEVICES_PATH}"
         ).read()
 
         devices = xml.etree.ElementTree.fromstring(response.decode("utf-8"))
@@ -105,7 +110,7 @@ class PowerStudioGateway:
 
         def get_variables(pack: list[str]) -> list[str]:
             # Build the URI
-            variables_uri = f"{self.host}:{self.port}{self.VARIABLES_PATH}?"
+            variables_uri = f"{self.url}{self.VARIABLES_PATH}?"
             for device_id in pack:
                 variables_uri += urllib.parse.quote(
                     f"{self.DEVICES_PARAM_NAME}={device_id}&", encoding="utf-8"
@@ -156,11 +161,13 @@ class PowerStudioGateway:
         def get_values(batch: list[str]) -> dict[str, float]:
             measurements: dict[str, float] = {}
             # Build the URI
-            values_uri = f"{self.host}:{self.port}{self.VALUES_PATH}?"
+            values_uri = f"{self.url}{self.VALUES_PATH}?"
             for variable_id in batch:
                 values_uri += f"{self.VARIABLES_PARAM_NAME}={variable_id}&"
 
             values_uri = values_uri.replace(" ", "%20")
+
+            self.logger.debug(values_uri)
 
             # Get the variables values XML from PowerStudio
             response = urllib.request.urlopen(values_uri).read()

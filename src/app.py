@@ -4,6 +4,7 @@ import os
 import json
 import logging
 import sys
+import time
 
 import dotenv  # type: ignore
 import paho.mqtt.publish
@@ -12,13 +13,12 @@ import rocketry.conds  # type: ignore
 
 import powerstudio_gateway
 
-dotenv.load_dotenv()  # type: ignore
+dotenv.load_dotenv("stack.env", override=True)  # type: ignore
 
 
 LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "INFO")
 
-POWERSTUDIO_HOST = os.getenv("POWERSTUDIO_HOST", default="http://localhost")
-POWERSTUDIO_PORT = int(os.getenv("POWERSTUDIO_PORT", default="80"))
+POWERSTUDIO_URL = os.getenv("POWERSTUDIO_URL", default="http://localhost:80")
 
 BROKER = os.getenv("MQTT_BROKER", default="localhost")
 PORT = int(os.getenv("MQTT_PORT", default="1883"))
@@ -33,25 +33,22 @@ VALUES_RETRIEVAL_INTERVAL = os.getenv(
 
 # Configure logging to stdout and stderr
 
-logger = logging.getLogger()
+logging.getLogger().setLevel(LOGGING_LEVEL)
+logger = logging.getLogger("service")
 
-logger.setLevel(LOGGING_LEVEL)
 formatter = logging.Formatter(
     "%(asctime)s | %(levelname)s | %(message)s", "%m-%d-%Y %H:%M:%S"
 )
-
 stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.DEBUG)
 stdout_handler.setFormatter(formatter)
 
 logger.addHandler(stdout_handler)
-
+logger.setLevel(LOGGING_LEVEL)
 logger.info("Starting application PowerStudio MQTT Gateway")
 
+
 # Create gateway object to connect to PowerStudio
-gateway = powerstudio_gateway.PowerStudioGateway(
-    f"https://{POWERSTUDIO_HOST}", POWERSTUDIO_PORT
-)
+gateway = powerstudio_gateway.PowerStudioGateway(POWERSTUDIO_URL)
 
 # Get all the available tags at application startup
 logger.info("Loading Powerstudio tags file")
@@ -66,34 +63,73 @@ if not gateway.tags_available():
     sys.exit(1)
 
 # Create Rocketry app instance
+logger.info("Creating Rocketry app instance")
 app = rocketry.Rocketry()
+logger.info("Rocketry app instance created")
+
+rocketry_logger = logging.getLogger("rocketry")
+rocketry_logger.addHandler(stdout_handler)
+rocketry_logger.setLevel(LOGGING_LEVEL)
 
 
 # Get data task
-@app.task(rocketry.conds.every(VALUES_RETRIEVAL_INTERVAL) | rocketry.conds.retry(3))  # type: ignore
+@app.task(VALUES_RETRIEVAL_INTERVAL)  # type: ignore
 def task_get_data():
 
     # Get the values from all the variables, in packs
-    measurement = gateway.get_tags_values()
+    logger.info("Retrieving data from Powerstudio")
+
+    measurement = None
+    retry = 0
+
+    while measurement is None:
+        try:
+            measurement = gateway.get_tags_values()
+        except Exception as e:
+            retry += 1
+            logger.error("Error while retrieving data from Powerstudio: %s", e)
+            if retry > 3:
+                logger.error("Max retries reached, aborting")
+                return
+            time.sleep(5)
     # Print the measurement
     # Convert dictionary to JSON inside a payload object
+    logger.info("Converting data to JSON")
     payload_json = json.dumps({"payload": measurement})
     # Print the JSON
     # Publish to MQTT broker
-    logger.info("Retrieved data from Powerstudio, %i tags", len(measurement))
-
-    paho.mqtt.publish.single(
-        TOPIC,
-        payload_json,
-        qos=2,
-        hostname=BROKER,
-        port=PORT,
-        client_id=CLIENT_ID,
-        auth={"username": USERNAME, "password": PASSWORD},
+    logger.info(
+        "Sending data from Powerstudio, %i tags, to MQTT broker %s:%i",
+        len(measurement),
+        BROKER,
+        PORT,
     )
+    done = False
+    retry = 0
+    while not done:
+        try:
+            paho.mqtt.publish.single(
+                TOPIC,
+                payload_json,
+                qos=2,
+                hostname=BROKER,
+                port=PORT,
+                client_id=CLIENT_ID,
+                auth={"username": USERNAME, "password": PASSWORD},
+            )
+            done = True
+        except Exception as e:
+            retry += 1
+            logger.error("Error while sending data to MQTT broker: %s", e)
+            if retry > 3:
+                logger.error("Max retries reached, aborting")
+                return
+            logger.error("Retrying in 5 seconds")
+            time.sleep(5)
 
-    logger.info("Published to MQTT broker %s:%i", BROKER, PORT)
+    logger.info("Task completed successfully")
 
 
 # Run the app
+logger.info("Launching Rocketry app")
 app.run()
