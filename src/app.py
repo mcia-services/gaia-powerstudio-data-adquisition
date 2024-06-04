@@ -18,7 +18,9 @@ dotenv.load_dotenv("stack.env", override=True)  # type: ignore
 
 LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "INFO")
 
-POWERSTUDIO_URL = os.getenv("POWERSTUDIO_URL", default="http://localhost:80")
+POWERSTUDIO_URL = os.getenv("POWERSTUDIO_URL")
+if POWERSTUDIO_URL is None:
+    raise ValueError("POWERSTUDIO_URL environment variable not set, aborting")
 
 BROKER = os.getenv("MQTT_BROKER", default="localhost")
 PORT = int(os.getenv("MQTT_PORT", default="1883"))
