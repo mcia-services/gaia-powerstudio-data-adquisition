@@ -184,10 +184,9 @@ class PowerStudioGateway:
                     and variable_id is not None
                     and variable_id.text is not None
                     and value.text is not None
+                    and value.text != "-"
                 ):
-                    measurements[variable_id.text] = (
-                        float(value.text) if value.text != "-" else 0.0
-                    )
+                    measurements[variable_id.text] = float(value.text)
 
             return measurements
 
